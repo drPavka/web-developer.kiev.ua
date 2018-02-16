@@ -1,7 +1,11 @@
 <?php
-function get_age(){
-    return (new DateTime())->diff(new DateTime('1976-11-22'))->format('%Y');
+function get_experience(){
+	return ( new DateTime() )->diff( new DateTime( '2000-1-1' ) )->format( '%Y' );
 }
+function get_age() {
+	return ( new DateTime() )->diff( new DateTime( '1976-11-22' ) )->format( '%Y' );
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -9,7 +13,8 @@ function get_age(){
     <title>Pavel Dubenko - web developer, team lead. system architect</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="Hxko80OG2Iw8G_wH93EqS_QisIplyYEdZ9iS65kNwkk"/>
-    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/site.css">
 
     <script type="text/javascript">
 
@@ -31,38 +36,42 @@ function get_age(){
 <body>
 <div class="container">
     <div class="row">
-
-            <h1>Pavel Dubenko<br/>
-                <small>web developer, team lead, system architect</small>
-            </h1>
-
+        <h1>Pavel Dubenko<br/>
+            <small>web developer, team lead, system architect</small>
+        </h1>
     </div>
     <div class="row">
         <span class="col-sm-4">
             <div>
-                <img src="img/pavel_dubenko.jpg" width="300" height="386" alt="Pavel Dubenko" border="0" class="img-polaroid"/>
+                <img src="img/pavel_dubenko.jpg" width="300" height="386" alt="Pavel Dubenko" border="0"
+                     class="img-polaroid"/>
             </div>
             <br/>
             <div style="margin-top:-390px; margin-left: -20px;position: relative;">
             <ul class="unstyled">
-                <li><a style="color: white;" href="http://ua.linkedin.com/in/paveldubenko/"><span class="label label-success" style="line-height: 25px;"><i class="icon-user icon-white"></i> LinkedIn</span></a></li>
-                <li style="margin-top: 5px;"><a style="color: white;" href="https://www.facebook.com/pavel.dubenko/"><span class="label label-info"><i class="icon-user icon-white"></i> Facebook</span></a></li>
+                <li><a style="color: white;" href="http://ua.linkedin.com/in/paveldubenko/"><span
+                                class="label label-success" style="line-height: 25px;"><i
+                                    class="icon-user icon-white"></i> LinkedIn</span></a></li>
+                <li style="margin-top: 5px;"><a style="color: white;"
+                                                href="https://www.facebook.com/pavel.dubenko/"><span
+                                class="label label-info"><i class="icon-user icon-white"></i> Facebook</span></a></li>
             </ul>
 
             </div>
         </span>
         <span class="col-sm-6 offset-sm-1">
             <dl class="dl-horizontal">
-                <dt>Technologies:</dt>
-                <dd><span class="badge badge-important">PHP</span> <span
-                            class="badge badge-important">JavaScript</span>
+                <dt>Key technologies:</dt>
+                <dd>
+                    <span class="badge badge-important">JavaScript(TypeScript)</span>
+                    <span class="badge badge-important">PHP</span>
                     <span class="badge badge-important">XSLT</span>
                     <span class="badge badge-important">SQL</span>
                 </dd>
                 <dt>Experience:</dt>
-                <dd>12 years</dd>
+                <dd><?= get_experience()?> years</dd>
                 <dt>Age:</dt>
-                <dd><?=get_age();?></dd>
+                <dd><?= get_age() ?></dd>
             </dl>
 
             <p class="lead">
@@ -153,7 +162,7 @@ function get_age(){
                     <dd>Chief of development, senior developer</dd>
                 </dl>
             </span>
-            <span class="col-sm-7">
+        <span class="col-sm-7">
                     <h3>Web sites development</h3>
                 <p>
                     Managing team consisting of developers, designers, coders
@@ -174,7 +183,7 @@ function get_age(){
                         <dd>Developer</dd>
                     </dl>
                 </span>
-                <span class="col-sm-7">
+        <span class="col-sm-7">
                         <h3>CMS development</h3>
                     <p>
                         Development of the <a href="http://xsight.com.ua/">XSight
@@ -186,7 +195,7 @@ function get_age(){
                 </span>
     </div>
     <hr/>
-    <p class="text-right">&copy; Pavel Dubenko <?= date('Y');?></p>
+    <p class="text-right">&copy; Pavel Dubenko <?= date( 'Y' ); ?></p>
 </div>
 </body>
 </html>
