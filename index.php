@@ -1,14 +1,16 @@
+<?php
+function get_age(){
+    return (new DateTime())->diff(new DateTime('1976-11-22'))->format('%Y');
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Pavel Dubenko - web developer, team lead. system architect</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="Hxko80OG2Iw8G_wH93EqS_QisIplyYEdZ9iS65kNwkk"/>
-    <link href="css/bootstrap-responsive.css" rel="stylesheet"/>
-    <link href="css/bootstrap.min.css" rel="stylesheet"/>
-    <style>
-	.page-header{ border-bottom:none;}
-    </style>
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+
     <script type="text/javascript">
 
         var _gaq = _gaq || [];
@@ -28,15 +30,15 @@
 </head>
 <body>
 <div class="container">
-    <div class="row-fluid">
-        <div class="page-header">
+    <div class="row">
+
             <h1>Pavel Dubenko<br/>
                 <small>web developer, team lead, system architect</small>
             </h1>
-        </div>
+
     </div>
-    <div class="row-fluid">
-        <span class="span4">
+    <div class="row">
+        <span class="col-sm-4">
             <div>
                 <img src="img/pavel_dubenko.jpg" width="300" height="386" alt="Pavel Dubenko" border="0" class="img-polaroid"/>
             </div>
@@ -49,7 +51,7 @@
 
             </div>
         </span>
-        <span class="span6 offset1">
+        <span class="col-sm-6 offset-sm-1">
             <dl class="dl-horizontal">
                 <dt>Technologies:</dt>
                 <dd><span class="badge badge-important">PHP</span> <span
@@ -60,7 +62,7 @@
                 <dt>Experience:</dt>
                 <dd>12 years</dd>
                 <dt>Age:</dt>
-                <dd>36</dd>
+                <dd><?=get_age();?></dd>
             </dl>
 
             <p class="lead">
@@ -82,11 +84,11 @@
             </span>
 
     </div>
-    <div class="row-fluid">
+    <div class="row">
         <h2>Experience</h2>
     </div>
-    <div class="row-fluid">
-        <span class="span5">
+    <div class="row">
+        <span class="col-sm-5">
             <dl class="dl-horizontal">
                 <dt>Period:</dt>
                 <dd>from 2008 till now</dd>
@@ -96,7 +98,7 @@
                 <dd>system architect, team leader, senior developer</dd>
             </dl>
         </span>
-        <span class="span7">
+        <span class="col-sm-7">
                 <h3>Content management platform for &quot;Media Group Ukraine&quot;</h3>
                 <ul>
                     <li>
@@ -140,8 +142,8 @@
     </div>
     <br/>
 
-    <div class="row-fluid">
-            <span class="span5">
+    <div class="row">
+            <span class="col-sm-5">
                 <dl class="dl-horizontal">
                     <dt>Period:</dt>
                     <dd>from 2006 till 2008</dd>
@@ -151,7 +153,7 @@
                     <dd>Chief of development, senior developer</dd>
                 </dl>
             </span>
-            <span class="span7">
+            <span class="col-sm-7">
                     <h3>Web sites development</h3>
                 <p>
                     Managing team consisting of developers, designers, coders
@@ -161,8 +163,8 @@
                 </p>
             </span>
     </div>
-    <div class="row-fluid">
-                <span class="span5">
+    <div class="row">
+                <span class="col-sm-5">
                     <dl class="dl-horizontal">
                         <dt>Period:</dt>
                         <dd>from 2003 till 2005</dd>
@@ -172,7 +174,7 @@
                         <dd>Developer</dd>
                     </dl>
                 </span>
-                <span class="span7">
+                <span class="col-sm-7">
                         <h3>CMS development</h3>
                     <p>
                         Development of the <a href="http://xsight.com.ua/">XSight
@@ -184,7 +186,7 @@
                 </span>
     </div>
     <hr/>
-    <p class="text-right">&copy; Pavel Dubenko 2013</p>
+    <p class="text-right">&copy; Pavel Dubenko <?= date('Y');?></p>
 </div>
 </body>
 </html>
